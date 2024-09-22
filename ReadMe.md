@@ -21,7 +21,7 @@ This is the second generation of CMN`s network fuzzer.
 Third generation is in beta testing and this release is no longer maintained but it is fully working and has been a valuable asset for finding bugs in network protocol implementations.
 I use this to get dumb fuzzing up and running really quick on all kind of devices.   
 I sometimes run netfuzz on my gateway since I just have to use a BPF filter to match the packets to fuzz.
-But most of the times I flip bits in packets from hardware attached to a bridget physical interface, or a WiFi access point.
+But most of the times I flip bits in packets from hardware attached to a bridged physical interface, or a WiFi access point.
 
 ---
 ### --[ 2.1 - Fuzzbridge VM
@@ -334,7 +334,7 @@ original, unmodified incoming packet. Watching the output from the logger we can
 see that the first time the rules hit, seven (7) 'A's was replaced with 'B' s at  
 the given offsets after the '[', and the second time, there was four (4)  
 replacements. You can read more about the log interface in netfuzzlog.4 and of  
-course and save the packets using the -w option in tcpdump as usual.  
+course save the packets using the -w option in tcpdump as usual.  
 
 ### --[ 3.2 - Flipping Bits
 Reading through the manual for netfuzz.rules (man netfuzz.rules) you can see  
