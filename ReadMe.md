@@ -17,7 +17,7 @@
 
 ---
 ### --[ 1.0 - Overview
-This is the second generation of the network fuzzer that began as a kernel patch to OpenBSD around 2012. 
+This is the second generation of the network fuzzer that began as a kernel patch to OpenBSD in 2012. 
 This release is a set of kernel modules for FreeBSD where the pfil(9) hook is used to intercept and modify packets based on rules in a file (see netfuzz.rules.5).
 Third generation is in beta testing and this release is no longer maintained but it is fully working and has been a valuable asset for finding bugs in many network protocol implementations.
 
@@ -29,14 +29,14 @@ but most of the times I flip bits in packets from hardware attached to a bridged
 ### --[ 2.1 - Fuzzbridge VM
 
 ```
-Filename: fuzzbridge.ova
+Filename: Fuzzbridge.ova
 Username: root
 Password: netfuzz
 Hostname: fuzzbridge
 ```
 
 This is a FreeBSD 10.3 i386 machine running the netfuzz kernel module along with the corresponding userland tools. 
-The manuals are installed and are also available as PDF files in the man directory. 
+The manuals are installed but are also available as PDF files in the man directory of this repo. 
 The machine can be downloaded from the VMs directory.  
 
 There are three network interfaces configured:
@@ -128,8 +128,8 @@ Start with logging into Fuzzbridge and making sure netfuzz is not enabled:
     root@fuzzbridge:~ # netfuzzctl -d
     netfuzzctl: netfuzz not enabled
 ```
-Log into both the OpenBSD NFS server and client (using the console or  
-SSH to the host only interface). On the NFS server, start listening  
+Log into both the OpenBSD server and client (using the console or  
+SSH to the host only interface). On the server, start listening  
 with nc(1) on port 516:
 ```
     user@workshop:~$ ssh root@192.168.56.145
