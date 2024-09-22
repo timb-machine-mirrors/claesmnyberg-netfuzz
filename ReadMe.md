@@ -18,7 +18,7 @@
 ---
 ### --[ 1.0 - Overview
 This is the second generation of the network fuzzer that began as a kernel patch to OpenBSD around 2012. 
-This release is a set of kernel modules for FreeBSD where the pfil(9) hook is used to intercept and modify packets based on rules in a file (see netfuzz.rules.5).  
+This release is a set of kernel modules for FreeBSD where the pfil(9) hook is used to intercept and modify packets based on rules in a file (see netfuzz.rules.5).
 Third generation is in beta testing and this release is no longer maintained but it is fully working and has been a valuable asset for finding bugs in many network protocol implementations.
 
 I use this to get dumb fuzzing up and running really quick on all kind of devices.   
