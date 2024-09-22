@@ -19,6 +19,9 @@
 ### --[ 1.0 - Overview
 This is the second generation of CMN`s network fuzzer. 
 Third generation is in beta testing and this release is no longer maintained but it is fully working and has been a valuable asset for finding bugs in network protocol implementations.
+I use this to get dumb fuzzing up and running really quick on all kind of devices.   
+I sometimes run netfuzz on my gateway since I just have to use a BPF filter to match the packets to fuzz.
+But most of the times I flip bits in packets from hardware attached to a bridget physical interface, or a WiFi access point.
 
 ---
 ### --[ 2.1 - Fuzzbridge VM
