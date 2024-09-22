@@ -1,5 +1,5 @@
 # Network Traffic Fuzzer
-## By Claes M Nyberg, ©️ 2014-2024 cmn@signedness.org
+## ©️ 2014-2024 Claes M Nyberg, cmn@signedness.org
 
 ---
 ### --[ Table of contents
@@ -8,8 +8,8 @@
 
 2 - Virtual Machines
 >   2.1 - Fuzzbridge VM  
->   2.2 - OpenBSD 7.5 Server  
->   2.3 - OpenBSD 7.5 Client  
+>   2.2 - OpenBSD Server  
+>   2.3 - OpenBSD Client  
 
 3 - Getting Started 
 >   3.1 - Testing Netfuzz  
@@ -17,11 +17,12 @@
 
 ---
 ### --[ 1.0 - Overview
-This is the second generation of CMN`s network fuzzer. 
+This is the second generation of the network fuzzer that began as a kernel patch to OpenBSD around 2012. 
+This release is a set of kernel modules for FreeBSD where the pfil(9) hook is used to intercept and modify packets based on rules in a file (see netfuzz.rules.5).  
 Third generation is in beta testing and this release is no longer maintained but it is fully working and has been a valuable asset for finding bugs in network protocol implementations.
 I use this to get dumb fuzzing up and running really quick on all kind of devices.   
-I sometimes run netfuzz on my gateway since I just have to use a BPF filter to match the packets to fuzz.
-But most of the times I flip bits in packets from hardware attached to a bridged physical interface, or a WiFi access point.
+I sometimes run netfuzz on my gateway since I just have to use a simple BPF filter in the rules file to match the packets to fuzz,  
+but most of the times I flip bits in packets from hardware attached to a bridged physical interface, or a WiFi access point.
 
 ---
 ### --[ 2.1 - Fuzzbridge VM
